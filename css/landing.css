@@ -1,0 +1,171 @@
+/* ================= Визитка (видна до входа) ================= */
+html.locked .header-link { display: none; }
+.eyebrow-green { color: var(--green-text); }
+
+.login {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow); padding: 14px 16px;
+}
+.login-text { display: flex; align-items: center; gap: 12px; }
+.login-text div { display: flex; flex-direction: column; line-height: 1.3; }
+.login-text b { color: var(--heading); font-weight: 600; }
+.login-text span:not(.badge) { font-size: 0.85rem; color: var(--text-soft); }
+.login-fields { display: flex; gap: 8px; flex: 1 1 260px; max-width: 420px; }
+.login-fields .input { padding: 11px 16px; min-width: 0; }
+.login .gate-error { flex-basis: 100%; }
+.l-section + .login { margin-top: 24px; }
+
+.l-h { font-size: clamp(1.8rem, 7vw, 2.8rem); margin-bottom: 18px; }
+.l-section { display: flex; flex-direction: column; align-items: stretch; gap: 14px; padding-top: 28px; }
+.l-section > .chip, .l-dark > .chip { align-self: flex-start; }
+.l-section > .lead { margin-top: -10px; color: var(--text-soft); }
+.l-sub { font-size: 1.3rem; margin-top: 14px; }
+.l-small { font-size: 0.82rem; color: var(--text-soft); }
+
+/* первый экран */
+.l-hero { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; padding-top: 8px; }
+.l-hero-text { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.l-hero h1 { font-size: clamp(2.1rem, 9vw, 3.6rem); }
+.l-hero .lead { font-size: 1.15rem; }
+.l-facts { display: flex; }
+.l-facts div { display: flex; flex-direction: column; padding-right: 22px; }
+.l-facts div + div { padding-left: 22px; border-left: 2px solid var(--border); }
+.l-facts span { color: var(--text-soft); font-size: 0.95rem; }
+.l-facts b { font: 800 clamp(1.5rem, 6vw, 2.2rem)/1.15 var(--font-heading); color: var(--heading); }
+.l-facts b.hl { color: var(--primary-dark); }
+.l-hero-photo { position: relative; max-width: 400px; width: 100%; margin: 12px auto 0; }
+.l-portrait {
+  position: relative; border-radius: 200px 200px var(--radius-lg) var(--radius-lg);
+  background: var(--surface-blue);
+  box-shadow: 0 0 0 6px var(--bg), 0 0 0 10px var(--accent-green);
+}
+.l-portrait img { display: block; width: 100%; height: auto; border-radius: inherit; }
+.l-days {
+  position: absolute; top: -8px; right: -8px; width: 96px; height: 96px; border-radius: 50%;
+  display: grid; place-content: center; text-align: center; background: #3569C7; color: #fff;
+  font-weight: 600; font-size: 0.9rem; line-height: 1; box-shadow: 0 0 0 5px var(--bg);
+}
+.l-days b { font: 800 2.5rem/1 var(--font-heading); }
+.l-name { position: relative; margin: -40px 16px 0; padding: 14px 18px; display: flex; flex-direction: column; }
+.l-name b { font: 800 1.2rem var(--font-heading); color: var(--heading); }
+.l-name span { color: var(--text-soft); font-size: 0.9rem; }
+.l-proof { display: flex; align-items: center; gap: 16px; padding: 12px; }
+.l-proof img { width: 46%; max-width: 220px; border-radius: var(--radius-md); flex: none; }
+.l-proof div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.l-proof .eyebrow { margin: 0; }
+.l-proof-value { font: 800 clamp(2rem, 9vw, 3rem)/1.05 var(--font-heading); color: #3569C7; }
+.l-proof-from { font-weight: 600; color: var(--heading); }
+.l-proof .soft { font-size: 0.85rem; }
+
+/* знакомо */
+.l-pains { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.l-pains li { display: flex; align-items: center; gap: 14px; padding: 16px; font-size: 1.02rem; color: var(--heading); box-shadow: none; }
+.l-bang { flex: none; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--surface-blue); color: var(--primary); font-weight: 800; }
+.l-banner { background: #3569C7; color: #fff; border-radius: var(--radius-lg); padding: 22px 20px; margin-top: 6px; }
+.l-banner h3 { color: #fff; font-size: 1.5rem; margin-bottom: 6px; }
+.l-banner p { color: rgba(255, 255, 255, 0.92); font-size: 1.05rem; }
+.l-banner .l-banner-strong { font: 700 1.2rem/1.4 var(--font-body); color: #fff; }
+
+/* что внутри */
+.l-blocks { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.l-block { border-radius: var(--radius-lg); padding: 20px; }
+.l-block-blue { background: var(--surface-blue); }
+.l-block-green { background: var(--surface-green); }
+.l-block-days { font-weight: 700; font-size: 0.95rem; color: var(--primary-dark); }
+.l-block-green .l-block-days, .l-block-green .l-check { color: var(--green-text); }
+.l-block h3 { font-size: 1.5rem; margin: 2px 0 12px; }
+.l-check { color: var(--primary); flex: none; margin-top: 0.15em; }
+.l-block .list { gap: 10px; }
+.l-block li { color: var(--heading); }
+
+/* как проходит */
+.l-how { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.l-how li { display: flex; align-items: center; gap: 16px; padding: 18px; box-shadow: none; }
+.l-how h3 { font-size: 1.15rem; margin-bottom: 4px; }
+.l-how p { color: var(--text-soft); }
+.l-icon { flex: none; width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; }
+.l-icon .icon { width: 26px; height: 26px; }
+.l-icon-blue { background: var(--surface-blue); color: var(--primary-dark); }
+.l-icon-green { background: var(--surface-green); color: var(--green-text); }
+
+/* бонусы — тёмный блок */
+.l-dark {
+  margin: 34px -16px 0; padding: 32px 16px; background: #1F3442; color: #D5E2EC;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.l-dark .l-h { color: #fff; }
+.l-chip-lime { background: #B8DB6E; color: #1F3442; font-size: 0.95rem; padding: 7px 16px; }
+.l-gifts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.l-gifts li { background: #1B2A36; border: 1px solid #2B3D4A; border-radius: var(--radius-lg); padding: 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.l-gifts h3 { color: #fff; font-size: 1.3rem; }
+.l-gifts p { color: #B4C6D3; }
+.l-when { font-weight: 700; }
+.l-when-green { background: #B8DB6E; color: #1F3442; }
+.l-when-blue { background: #A7C9FF; color: #1F3442; }
+.l-big { font: 800 3.4rem/1 var(--font-heading); color: #B8DB6E; }
+.l-gift-icon .icon { width: 46px; height: 46px; }
+.l-gift-green { color: #B8DB6E; }
+.l-gift-blue { color: #A7C9FF; }
+
+/* что изменится */
+.l-changes { display: grid; grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr); gap: 10px 6px; align-items: stretch; }
+.l-col-h { font-weight: 700; color: var(--text-soft); }
+.l-col-after { color: var(--green-text); }
+.l-now, .l-after { border-radius: var(--radius-md); padding: 12px; display: flex; align-items: center; font-size: 0.92rem; line-height: 1.4; }
+.l-now { background: var(--surface); border: 1px solid var(--border); }
+.l-after { background: var(--surface-green); color: var(--heading); font-weight: 600; }
+.l-arrow { display: grid; place-items: center; color: var(--primary); }
+
+/* результаты */
+.l-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.result { margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.result figcaption { font-weight: 700; color: var(--heading); text-align: center; }
+.l-results-men { grid-template-columns: minmax(0, 1fr); }
+.l-note-green { background: var(--surface-green); border-radius: var(--radius-lg); padding: 18px 20px; font: 700 1.1rem/1.45 var(--font-body); color: var(--heading); }
+
+/* обучение */
+.l-edu { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.l-diploma { box-shadow: var(--shadow); }
+.l-edu-list { list-style: none; margin: 0; padding: 0; }
+.l-edu-list li { display: flex; flex-direction: column; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.l-edu-list b { font: 800 1.15rem/1.3 var(--font-heading); color: var(--heading); }
+.l-edu-list span { color: var(--text-soft); }
+
+/* ведущий и цена */
+.l-coach { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; align-items: center; }
+.l-coach-photo { width: 100%; max-width: 320px; border-radius: var(--radius-lg); background: var(--surface-blue); }
+.l-coach .l-h { margin: 4px 0 10px; }
+.l-coach .eyebrow { margin: 0; font-size: 0.9rem; text-transform: none; letter-spacing: 0; font-weight: 700; }
+.l-stats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.l-stats .card { padding: 10px 16px; box-shadow: none; color: var(--text-soft); }
+.l-stats b { font: 800 1.4rem var(--font-heading); color: var(--heading); }
+.l-quote { margin: 6px 0 0; background: var(--surface-green); border-radius: var(--radius-lg); padding: 20px; font: 700 1.15rem/1.45 var(--font-body); color: var(--heading); }
+.l-price {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+  background: #3569C7; color: #fff; border-radius: var(--radius-lg); padding: 22px 20px; margin-top: 6px;
+}
+.l-price div { display: flex; flex-direction: column; }
+.l-price b { font: 800 clamp(2.4rem, 10vw, 3.4rem)/1.05 var(--font-heading); }
+.l-price span { color: rgba(255, 255, 255, 0.9); }
+.l-price-btn { background: #fff; color: #1F3442; }
+.l-price-btn:hover { background: var(--surface-blue); }
+
+@media (min-width: 640px) {
+  .l-dark { margin: 40px 0 0; padding: 40px 32px; border-radius: var(--radius-lg); }
+  .l-pains, .l-blocks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .l-gifts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .l-results { gap: 18px; }
+  .l-results-men { grid-template-columns: 2fr 1fr; }
+  .l-changes { grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1.2fr); gap: 12px; }
+  .l-now, .l-after { padding: 18px 20px; font-size: 1.02rem; }
+  .l-coach { grid-template-columns: 300px minmax(0, 1fr); gap: 30px; }
+  .l-price { padding: 28px 32px; }
+}
+@media (min-width: 900px) {
+  .l-hero { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); grid-template-areas: "text photo" "proof photo"; align-items: start; column-gap: 48px; }
+  .l-hero-text { grid-area: text; }
+  .l-hero-photo { grid-area: photo; margin-top: 24px; }
+  .l-proof { grid-area: proof; }
+  .l-edu { grid-template-columns: 1.2fr 1fr; align-items: start; }
+}

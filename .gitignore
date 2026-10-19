@@ -1,0 +1,7 @@
+_originals/
+source/
+*.old.json
+bot.zip.zip
+.claude/
+/[0-9]*.png
+/4 (2).png
